@@ -108,6 +108,21 @@ To get all the companies registered by a user - less than 5, you can perform a G
 
 You can notice that there are only 3 companies per page, I set this low number on purpose, because the maximum number of companies created per user is 5, and this way it's easier to see how the pagination works. 
 
+#### Updating employee number
+
+To update the employee number for each of your companies send a PUT request with the following format:
+
+- **Method:** PUT
+- **URL:** `http://localhost:8000/api1/companies/6/`  #6 is the company id number
+- **Headers:**
+  - `Content-Type: application/json`
+  - `Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2`  <!-- provided token -->
+- **Body:**
+  ```json
+  {
+    "number_of_employees": 101
+  }
+
 
 
 ## Database
