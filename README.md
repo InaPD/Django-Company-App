@@ -44,7 +44,7 @@ As all endpoints are required to be protected, the user should generate a token,
     "username": "ina2",
     "password": "ina12345"   
     }
-
+```
 
 After the token is provided you can use it to perform other actions on the app.
 
@@ -122,6 +122,7 @@ To update the employee number for each of your companies send a PUT request with
   {
     "number_of_employees": 101
   }
+  ```
 
 
 
