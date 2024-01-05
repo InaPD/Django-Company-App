@@ -34,11 +34,6 @@ class CompanyListView(generics.ListCreateAPIView):
             data = [{"company_name": item["company_name"], "description": item["description"], "number_of_employees": item["number_of_employees"]} for item in serializer.data]
             return self.get_paginated_response(data)
 
-        # Serialize only specific fields
-        # serializer = self.get_serializer(queryset, many=True)
-        # data = [{"company_name": item["company_name"], "description": item["description"], "number_of_employees": item["number_of_employees"]} for item in serializer.data]
-
-        # return Response(data)
 
     def perform_create(self, serializer):
         user = self.request.user
@@ -83,7 +78,7 @@ class UserCompaniesView(generics.ListAPIView):
 def send_email(email, company_name):
         subject = 'Company Created'
         message = f'Thank you for creating a new company: {company_name}.'
-        from_email = 'your_email@example.com'  # Update with your email address or use a dedicated email account
+        from_email = 'djangotestappina@gmail.com'  
         recipient_list = [email]
 
         send_mail(subject, message, from_email, recipient_list)
