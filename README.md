@@ -24,12 +24,12 @@ To start the app simply clone the repo and run the following commands in termina
 
 ## Local Testing
 
-### Creating a user
+#### Creating a user
 
 To create a new user open the Admin panel at http://127.0.0.1:8000/admin/ and login as the superuser to be able to manage the application. You can login using username: ina and password: ina ( they are the same for easier use). Then you can create the user.
 
 
-### Creating a token
+#### Creating a token
 
 As all endpints are required to be protected, the user should generate a token, so that the app knows it's an authorized user trying to reach it. In order to generate the token I used Postman to send a request for token generation with the following format:
 
@@ -45,7 +45,7 @@ Body:
 
 After the token is provided you can use it to perform other actions on the app.
 
-### Creating a company
+#### Creating a company
 
 To create a new company you can simply send a POST request with the following format:
 
@@ -65,7 +65,7 @@ With this the company will be created in the database and the user can access th
 
 The other functionalities of the assignment can be tested in similar format.
 
-### Listing all companies for loged in user
+#### Listing all companies for loged in user
 
 To get all the companies registered by a user - less than 5, you can perform a GET request in this format:
 
