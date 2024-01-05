@@ -87,8 +87,8 @@ To get all the companies registered by a user - less than 5, you can perform a G
     "previous": null,
     "results": [
         {
-            "company_name": "Your Company Name",
-            "description": "Your Company Description",
+            "company_name": "Company1",
+            "description": "Company Description",
             "number_of_employees": 10
         },
         {
