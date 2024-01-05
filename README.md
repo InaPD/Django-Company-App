@@ -2,12 +2,12 @@
 
 ## Introduction
 
-This app is a Django application that allows users to create their companies and perform CRUD operations with them in the database. There are 2 main entities in this app: Users and Companies. Each user is created through the Admin panel of the Django application and as fields they have the typical user related fields such as: email, username, first name, last name etc. and they can be checked in the auth_user table in the database. Each company can be created by a user, they are saved in the database table myapp_company with the following fields: id, company_name, description, number_of_employees, owner. 
+This app is a Django application that allows users to create their companies and perform CRUD operations with them in the database. There are 2 main entities in this app: Users and Companies. Each user is created through the Admin panel of the Django application and they have the typical user related fields such as: email, username, first name, last name etc. and they can be checked in the auth_user table in the database. Each company can be created by a user, they are saved in the database table myapp_company with the following fields: id, company_name, description, number_of_employees, owner. 
 
 
 ## Starting the app
 
-To start the app simply clone the repo and run the following commands in terminal:
+To start the app run the following commands in terminal:
 
 1. Clone the repository to your local machine.
 
@@ -42,7 +42,7 @@ As all endpints are required to be protected, the user should generate a token, 
   ```json
     {
     "username": "ina2",
-    "password": "ina12345"   # generated for the new user 
+    "password": "ina12345"   
     }
 
 
@@ -80,14 +80,6 @@ To get all the companies registered by a user - less than 5, you can perform a G
   - `Content-Type: application/json`
   - `Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2`  <!-- provided token -->
 
-
-Method: GET
-URL: http://localhost:8000/api1/companies/
-Headers:
-Content-Type: application/json
-Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2  # provided token
-
-The response will be in the JSON format like so:
 
 ```json
 {
