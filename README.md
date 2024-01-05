@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This app is a Django application that allows users to create their companies and perform CRUD operations with them in the database. There are 2 main entities in this app: Users and Companies. Each user is created through the Admin panel of the Django application and as fields they have the typical user related fields such as:    and they can be checked in the auth_user table in the database. Each company can be created by a user, they are saved in the database table myapp_company with the following fields: id, company_name, description, number_of_employees, owner. 
+This app is a Django application that allows users to create their companies and perform CRUD operations with them in the database. There are 2 main entities in this app: Users and Companies. Each user is created through the Admin panel of the Django application and as fields they have the typical user related fields such as: email, username, first name, last name etc. and they can be checked in the auth_user table in the database. Each company can be created by a user, they are saved in the database table myapp_company with the following fields: id, company_name, description, number_of_employees, owner. 
 
 
 ## Starting the app
@@ -33,15 +33,18 @@ To create a new user open the Admin panel at http://127.0.0.1:8000/admin/ and lo
 
 As all endpints are required to be protected, the user should generate a token, so that the app knows it's an authorized user trying to reach it. In order to generate the token I used Postman to send a request for token generation with the following format:
 
-Method: GET
-URL: http://localhost:8000/api/token/
-Headers:
-Content-Type: application/json
-Body:
-{
-"username": "ina2",
-"password": "ina12345"   # generated for the new user 
-}
+
+- **Method:** GET
+- **URL:** `http://localhost:8000/api/token/`
+- **Headers:**
+  - `Content-Type: application/json`
+- **Body:**
+  ```json
+    {
+    "username": "ina2",
+    "password": "ina12345"   # generated for the new user 
+    }
+
 
 After the token is provided you can use it to perform other actions on the app.
 
@@ -49,17 +52,18 @@ After the token is provided you can use it to perform other actions on the app.
 
 To create a new company you can simply send a POST request with the following format:
 
-Method: POST
-URL: http://localhost:8000/api1/companies/
-Headers:
-Content-Type: application/json
-Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2  # provided token
-Body:
-{
-  "company_name": "Krofnite of Hrom",
-  "description": "Bakery",
-  "number_of_employees": 33
-}
+- **Method:** POST
+- **URL:** `http://localhost:8000/api1/companies/`
+- **Headers:**
+  - `Content-Type: application/json`
+  - `Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2`  <!-- provided token -->
+- **Body:**
+  ```json
+  {
+    "company_name": "Krofnite of Hrom",
+    "description": "Bakery",
+    "number_of_employees": 33
+  }
 
 With this the company will be created in the database and the user can access the information about it. Also, the user will receive a confirmation email if they provided an email when creating it in the Admin Panel. 
 
@@ -69,6 +73,14 @@ The other functionalities of the assignment can be tested in similar format.
 
 To get all the companies registered by a user - less than 5, you can perform a GET request in this format:
 
+
+- **Method:** GET
+- **URL:** `http://localhost:8000/api1/companies/`
+- **Headers:**
+  - `Content-Type: application/json`
+  - `Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2`  <!-- provided token -->
+
+
 Method: GET
 URL: http://localhost:8000/api1/companies/
 Headers:
@@ -77,6 +89,7 @@ Authorization: Token 78235364761565108b81701a85cbdd2f8d5ed9d2  # provided token
 
 The response will be in the JSON format like so:
 
+```json
 {
     "count": 5,
     "next": "http://localhost:8000/api1/companies/?page=2",
@@ -99,9 +112,9 @@ The response will be in the JSON format like so:
         }
     ]
 }
+```
 
 You can notice that there are only 3 companies per page, I set this low number on purpose, because the maxinum number of companies created per user is 5, and this way it's easier to see how the pagination works. 
-
 
 
 
