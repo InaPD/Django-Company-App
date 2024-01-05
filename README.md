@@ -114,13 +114,14 @@ You can notice that there are only 3 companies per page, I set this low number o
 
 For the database I used a PostgresSQL database hosted on ElephantSQL. It can be accessed with the following connection:
 
-- **Name:** Name of the set up, for example ElephantSQL
-- **Host name/address:** `castor.db.elephantsql.com`
-- **Port:** `5432`
-- **Maintenance DB:** `vzovsduz`
-- **Username:** `vzovsduz`
-- **Password:** `kNW9PQOAXSGCDnfLOixMQ2mFqNvxtJHm`
+**Name:** Name of the set up, for example ElephantSQL  
+**Host name/address:** `castor.db.elephantsql.com`  
+**Port:** `5432`  
+**Maintenance DB:** `vzovsduz`  
+**Username:** `vzovsduz`  
+**Password:** `kNW9PQOAXSGCDnfLOixMQ2mFqNvxtJHm`
 
 Please keep in mind that because this is a free service and not very stable, I experienced that from time to time it lost connection. In that case you need to wait for a few seconds and try to perform the request again. Also keep in mind that when you connect to the server, there are quite a lot of databases and you have to scroll down to the one named vzovsduz.
 
+If you have any additional questions feel free to contact me at ipopducheva@gmail.com. 
 
