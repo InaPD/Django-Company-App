@@ -31,7 +31,7 @@ To create a new user open the Admin panel at http://127.0.0.1:8000/admin/ and lo
 
 #### Creating a token
 
-As all endpints are required to be protected, the user should generate a token, so that the app knows it's an authorized user trying to reach it. In order to generate the token I used Postman to send a request for token generation with the following format:
+As all endpoints are required to be protected, the user should generate a token, so that the app knows it's an authorized user trying to reach it. In order to generate the token I used Postman to send a request for token generation with the following format:
 
 
 - **Method:** GET
@@ -69,7 +69,7 @@ With this the company will be created in the database and the user can access th
 
 The other functionalities of the assignment can be tested in similar format.
 
-#### Listing all companies for loged in user
+#### Listing all companies for logged in user
 
 To get all the companies registered by a user - less than 5, you can perform a GET request in this format:
 
@@ -106,7 +106,7 @@ To get all the companies registered by a user - less than 5, you can perform a G
 }
 ```
 
-You can notice that there are only 3 companies per page, I set this low number on purpose, because the maxinum number of companies created per user is 5, and this way it's easier to see how the pagination works. 
+You can notice that there are only 3 companies per page, I set this low number on purpose, because the maximum number of companies created per user is 5, and this way it's easier to see how the pagination works. 
 
 
 
@@ -114,13 +114,13 @@ You can notice that there are only 3 companies per page, I set this low number o
 
 For the database I used a PostgresSQL database hosted on ElephantSQL. It can be accessed with the following connection:
 
-Name: Name of the set up, for example ElephantSQL
-Host name/address: castor.db.elephantsql.com
-Port: 5432
-Maintenance DB: vzovsduz
-Username: vzovsduz
-Password: kNW9PQOAXSGCDnfLOixMQ2mFqNvxtJHm
+- **Name:** Name of the set up, for example ElephantSQL
+- **Host name/address:** `castor.db.elephantsql.com`
+- **Port:** `5432`
+- **Maintenance DB:** `vzovsduz`
+- **Username:** `vzovsduz`
+- **Password:** `kNW9PQOAXSGCDnfLOixMQ2mFqNvxtJHm`
 
-Please keep in mind that becuse this is a free service and not very stable, I experienced that from time to time it lost connection. In that case you need to wait for a few seconds and try to perform the request again. Also keep in mind that when you connect to the server, there are quite a lot of databases and you have to scroll down to the one named vzovsduz.
+Please keep in mind that because this is a free service and not very stable, I experienced that from time to time it lost connection. In that case you need to wait for a few seconds and try to perform the request again. Also keep in mind that when you connect to the server, there are quite a lot of databases and you have to scroll down to the one named vzovsduz.
 
 
