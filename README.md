@@ -44,7 +44,6 @@ As all endpoints are required to be protected, the user should generate a token,
     "username": "ina2",
     "password": "ina12345"   
     }
-```
 
 After the token is provided you can use it to perform other actions on the app.
 
